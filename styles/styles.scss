@@ -1,0 +1,16 @@
+@import 'colors';
+@import 'media-quires';
+@import 'nav';
+@import 'hero-section';
+@import 'section-two';
+@import 'section-three';
+@import 'footer';
+
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  list-style-type: none;
+  overflow-x: hidden;
+}

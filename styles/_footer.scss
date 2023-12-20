@@ -1,0 +1,114 @@
+@import 'colors';
+@import 'media-quires';
+
+
+footer{
+  background: $DB;
+  padding: 50px 0 20px;
+
+  .footer-container{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding-bottom: 20px;
+
+    @include mobile{
+      flex-direction: column;   
+    }
+
+    .left{
+      display: flex;
+      gap: 90px;
+
+      @include mobile{
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        margin-bottom: 30px; 
+      }
+
+      .socials{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        img{
+          margin-bottom: 30px;
+        }
+
+        svg{
+          cursor: pointer;
+          
+          path:hover{
+            fill: $LG;
+          }
+
+          @include mobile{
+            margin-bottom: 30px;
+          }
+        }
+
+        .socials-container{
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+      .footer-nav{
+        display: flex;
+        gap: 90px;
+
+        @include mobile{
+          flex-direction: column;
+          align-items: center;
+          gap: 15px;
+        }
+
+        ul{
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+
+          li{
+            color: $crack;
+            cursor: pointer;
+
+            @include mobile{
+              text-align: center;
+            }
+          }
+          li:hover{
+            color: $LG;
+          }
+        }
+      }
+    }
+    .right{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 15px;
+
+      @include mobile{
+       align-items: center; 
+      }
+
+      button{
+        background: linear-gradient(90deg, $LG, $BG);
+        padding: 8px 20px;
+        border-radius: 30px;
+        border: none;
+        font-size: 13px;
+        color: $crack;
+        cursor: pointer;
+      }
+      button:hover{
+        opacity: 0.7;
+      }
+
+      p{
+        color: $GB;
+      }
+    }
+  }
+}

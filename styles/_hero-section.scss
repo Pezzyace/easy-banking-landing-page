@@ -1,0 +1,105 @@
+@import 'colors';
+@import 'media-quires';
+
+.hero-section{
+  background-color: $VLG;
+  
+
+  .hero-wrapper{
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+
+    @include mobile{
+      display: flex;
+      flex-direction: column-reverse;
+      width: 100%;
+    }
+
+    .left{
+      @include mobile{
+        width: 85%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 70px;
+      }
+
+      h1{
+        font-size: 40px;
+        margin-bottom: 20px;
+        width: 70%;
+        color: $DB;
+
+        @include mobile{
+          text-align: center;
+          width: 100%;
+        }
+      }
+      p{
+        font-size: 18px;
+        margin-bottom: 30px;
+        width: 90%;
+        color: $GB;
+
+        @include mobile{
+          width: 100%;
+          text-align: center;
+          font-size: 15px;
+        }
+      }
+      button{
+        background: linear-gradient(90deg, $LG, $BG);
+        padding: 8px 20px;
+        border-radius: 30px;
+        border: none;
+        font-size: 13px;
+        color: $crack;
+        cursor: pointer;
+      }
+      button:hover{
+        opacity: 0.5;
+      }
+    }
+    .right{
+      height: 70vh;
+
+      .pattern{
+        position: absolute;
+        right: -35%;
+        top: -30%;
+        z-index: 50;
+
+        @include mobile{
+          display: none;
+        }
+      }
+
+      .mobile-pattern{
+        display: none;
+
+        @include mobile{
+          display: inline-flex;
+        }
+      }
+
+      .phone{
+        position: absolute;
+        right: -100px;
+        width: 45%;
+        top: -100px;
+        z-index: 75;
+
+        @include mobile{
+          right: 5%;
+          top: -70px;
+          width: 90%;
+        }
+      }
+    }
+  }
+}
